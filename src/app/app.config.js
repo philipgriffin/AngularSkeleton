@@ -1,5 +1,5 @@
 angular.module('skeletonApp')
-    .config(function($stateProvider, $urlRouterProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/home');
 
@@ -13,4 +13,4 @@ angular.module('skeletonApp')
                 url: '/temp',
                 template: 'Template page'
             });
-    });
+    }]);

@@ -1,4 +1,4 @@
 angular.module('footer')
     .component('prefixFooter', {
-        templateUrl: '../footer/footer.template.html'
+        templateUrl: 'app/footer/footer.template.html'
     });
