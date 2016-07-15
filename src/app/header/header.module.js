@@ -1,1 +1,3 @@
-angular.module('header', []);
+(function() {
+    angular.module('header', []);
+}());

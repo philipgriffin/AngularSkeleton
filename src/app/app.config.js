@@ -1,16 +1,18 @@
-angular.module('skeletonApp')
-    .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+(function() {
+    angular.module('skeletonApp')
+        .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise('/home');
+            $urlRouterProvider.otherwise('/home');
 
-        $stateProvider
-            .state('home', {
-                url: '/home',
-                template: 'Homepage page'
-            })
+            $stateProvider
+                .state('home', {
+                    url: '/home',
+                    template: 'Homepage page'
+                })
 
-            .state('temp', {
-                url: '/temp',
-                template: 'Template page'
-            });
-    }]);
+                .state('temp', {
+                    url: '/temp',
+                    template: 'Template page'
+                });
+        }]);
+})();
