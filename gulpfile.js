@@ -20,7 +20,7 @@ var paths = {
     srcJsAll: 'src/**/*.js',
     srcTemplates: 'src/**/*.html',
     srcImages: 'src/app/assets/images/*',
-    srcStyles: ['src/app/*.css', 'node_modules/angular-loading-bar/build/loading-bar.min.css'],
+    srcStyles: ['src/app/*.css'],
     tmpTemplates: '.tmp/templates.js',
     dist: 'dist/',
     distJs: 'dist/scripts/',
@@ -30,8 +30,7 @@ var paths = {
 
 var vendorJs = [
     'node_modules/angular/angular.min.js',
-    'node_modules/angular-ui-router/release/angular-ui-router.min.js',
-    'node_modules/angular-loading-bar/build/loading-bar.min.js'
+    'node_modules/angular-ui-router/release/angular-ui-router.min.js'
 ];
 
 // MAIN TASKS
@@ -119,14 +118,17 @@ gulp.task('images', function () {
     return gulp.src(paths.srcImages)
         .pipe(gulp.dest(paths.distImages))
         .on('end', function() {
-            gutil.log(gutil.colors.blue('Images:'), gutil.colors.red(paths.distImages));
+            gutil.log(gutil.colors.blue('Images >'), gutil.colors.green(paths.distImages));
         });
 });
 
 gulp.task('css', function () {
     return gulp.src(paths.srcStyles)
         .pipe(concat('style.css'))
-        .pipe(gulp.dest(paths.dist));
+        .pipe(gulp.dest(paths.dist))
+        .on('end', function() {
+            gutil.log(gutil.colors.blue('Styles: Concat | >'), gutil.colors.green(paths.distImages));
+        });
 });
 
 // End Build Tasks.

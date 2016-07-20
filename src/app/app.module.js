@@ -1,3 +1,3 @@
 (function() {
-    angular.module('skeletonApp', ['ui.router', 'header', 'footer', 'angular-loading-bar']);
+    angular.module('skeletonApp', ['ui.router', 'header', 'footer']);
 }());
