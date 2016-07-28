@@ -16,6 +16,7 @@ var paths = {
     srcIndex: 'src/app/index.html',
     srcJsModules: 'src/**/*.module.js',
     srcJsComponents: 'src/**/*.component.js',
+    srcJsDirectives: 'src/**/*.directives.js',
     srcJsConfig: 'src/**/*.component.js',
     srcJsAll: 'src/**/*.js',
     srcTemplates: 'src/**/*.html',
@@ -58,7 +59,7 @@ gulp.task('scripts', ['templatecache'], function () {
             paths.srcJsConfig,
             paths.srcJsAll])
         .pipe(concat('scripts.js'))
-//        .pipe(gulp.dest(paths.distJs))
+       .pipe(gulp.dest(paths.distJs))
         .pipe(rename('scripts.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest(paths.distJs))
