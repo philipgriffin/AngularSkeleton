@@ -3,6 +3,7 @@
  has loaded. Once loaded it be applied to the src tag or background depending on usage.
  @example    <div></div>
  */
+(function() {
 angular.module('core')
     .directive('clickAnimation', function() {
         return {
@@ -20,3 +21,4 @@ angular.module('core')
             }
         };
     });
+})();
