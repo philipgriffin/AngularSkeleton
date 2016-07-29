@@ -1,11 +1,10 @@
 /*
  @desc       This directive will animate an element on click using the specified animate-css animation
  has loaded. Once loaded it be applied to the src tag or background depending on usage.
- @example    TODO
+ @example    <div></div>
  */
-(function() {
 angular.module('core')
-    .directive('randomClickAnimation', function() {
+    .directive('clickAnimation', function() {
         return {
             restrict: 'A',
             scope: {
@@ -21,4 +20,3 @@ angular.module('core')
             }
         };
     });
-});
