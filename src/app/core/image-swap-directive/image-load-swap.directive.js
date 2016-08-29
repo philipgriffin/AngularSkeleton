@@ -26,7 +26,8 @@
                         element.attr('src', scope.highResImage);
                     } else {
                         element.css({
-                            'background': 'url(' + scope.highResImage + ')'
+                            'background': 'url(' + scope.highResImage + ') no-repeat center center fixed',
+                            'background-size': 'cover'
                         });
                     }
                 };
